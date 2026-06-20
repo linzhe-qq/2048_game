@@ -89,31 +89,28 @@ All parameters are defined in `config.py` as a `@dataclass`:
 | `lr_decay_min` | 1e-7 | Minimum learning rate floor |
 | `device` | auto | `auto`, `cuda`, or `cpu` |
 
-## Dashboard Layout
+### Dashboard Layout
 
-```
-+----------------------------------------------------------+
-| 2048 DQN TRAINER                            14:30:05     |
-| * RUNNING                                                |
-| [S] Start/Resume  [P] Pause  [R] Reset  [M] Save  [Q] Quit |
-+---------------------------+------------------------------+
-| Current                   | Statistics                   |
-| Episode:        1,234     | Avg (10 ep):        3,456   |
-| Ep. Steps:        312     | Best Score:         8,192   |
-| Score:            2,048   | Total Steps:      234,567   |
-| Epsilon:    0.0521 ████   | Buffer:             78.3%   |
-| Learning Rate:   1e-04    | Next Target:     432 steps  |
-| Last Loss:    0.003124    |                              |
-|                           | TREND (8,192 max)            |
-|                           |  _._._._._._._._._._._._    |
-+---------------------------+------------------------------+
-| [ BOARD ]                          last: ^               |
-|  .  2  4  8                                                |
-| 16 32 64 128                                              |
-| 256 512 1K 2K                                             |
-|  .  .  .  .                                               |
-+----------------------------------------------------------+
-```
+| Area | Line | Content |
+|------|------|---------|
+| Header | 1 | `2048 DQN TRAINER` (left) + Timestamp (right) |
+| Header | 2 | Status indicator: `● RUNNING` / `▌▌ PAUSED` / `■ STOPPED` |
+| Header | 3 | `[S] Start/Resume  [P] Pause  [R] Reset  [M] Save  [Q] Quit` |
+| Left Panel | 1 | `Episode: 1,234` |
+| Left Panel | 2 | `Ep. Steps: 312` |
+| Left Panel | 3 | `Score: 2,048` |
+| Left Panel | 4 | `Epsilon: 0.0521 ████` (with progress bar) |
+| Left Panel | 5 | `Learning Rate: 1e-04` |
+| Left Panel | 6 | `Last Loss: 0.003124` |
+| Right Panel | 1 | `Avg (10 ep): 3,456` |
+| Right Panel | 2 | `Best Score: 8,192` |
+| Right Panel | 3 | `Total Steps: 234,567` |
+| Right Panel | 4 | `Buffer: 78.3%` |
+| Right Panel | 5 | `Next Target: 432 steps` |
+| Right Panel | 6 | `TREND (8,192 max)` |
+| Right Panel | 7 | 20×5 ASCII sparkline chart: `_._._._._._._._._._._._` |
+| Board | 1 | `[ BOARD ]` (left) + `last: ^` (right) |
+| Board | 2-5 | 4×4 grid with per-tile color mapping (0 → `.`, 2→2048 with gradient colors) |
 
 ## Checkpoint Structure
 
