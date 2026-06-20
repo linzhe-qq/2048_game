@@ -92,27 +92,27 @@ All parameters are defined in `config.py` as a `@dataclass`:
 ## Dashboard Layout
 
 ```
-╭──────────────────────────────────────────────────────────╮
-│ 2048 DQN TRAINER                            14:30:05     │
-│ ● RUNNING                                                │
-│ [S] Start/Resume  [P] Pause  [R] Reset  [M] Save  [Q] Quit │
-├─────────────────────────┬────────────────────────────────┤
-│ Current                 │ Statistics                     │
-│ Episode:        1,234   │ Avg (10 ep):          3,456   │
-│ Ep. Steps:        312   │ Best Score:           8,192   │
-│ Score:            2,048 │ Total Steps:      234,567     │
-│ Epsilon:    0.0521 ████ │ Buffer:             78.3%     │
-│ Learning Rate:   1e-04  │ Next Target:     432 steps    │
-│ Last Loss:    0.003124  │                              │
-│                         │ TREND (8,192 max)             │
-│                         │  ▁▂▃▄▅▆▇█▇▆▅▄▃▂▁▂▃▄▅        │
-├─────────────────────────┴────────────────────────────────┤
-│ [ BOARD ]                          last: ↑               │
-│  ·  2  4  8                                                │
-│ 16 32 64 128                                              │
-│ 256 512 1K 2K                                             │
-│  ·  ·  ·  ·                                               │
-╰──────────────────────────────────────────────────────────╯
++----------------------------------------------------------+
+| 2048 DQN TRAINER                            14:30:05     |
+| * RUNNING                                                |
+| [S] Start/Resume  [P] Pause  [R] Reset  [M] Save  [Q] Quit |
++---------------------------+------------------------------+
+| Current                   | Statistics                   |
+| Episode:        1,234     | Avg (10 ep):        3,456   |
+| Ep. Steps:        312     | Best Score:         8,192   |
+| Score:            2,048   | Total Steps:      234,567   |
+| Epsilon:    0.0521 ████   | Buffer:             78.3%   |
+| Learning Rate:   1e-04    | Next Target:     432 steps  |
+| Last Loss:    0.003124    |                              |
+|                           | TREND (8,192 max)            |
+|                           |  _._._._._._._._._._._._    |
++---------------------------+------------------------------+
+| [ BOARD ]                          last: ^               |
+|  .  2  4  8                                                |
+| 16 32 64 128                                              |
+| 256 512 1K 2K                                             |
+|  .  .  .  .                                               |
++----------------------------------------------------------+
 ```
 
 ## Checkpoint Structure
